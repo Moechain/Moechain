@@ -16,9 +16,15 @@
   "license": "ISC",
   "dependencies": {
     "bs58": "^4.0.1",
-    "k-bucket": "^3.2.1",
+    "commander": "^2.11.0",
+    "joi": "^10.6.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^7.2.1",
     "leveldown": "^1.7.2",
     "levelup": "^1.3.8",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
     "tweetnacl": "^1.0.0"
   },
   "devDependencies": {}
