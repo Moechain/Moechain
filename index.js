@@ -4,7 +4,7 @@ const app = new Koa()
 const bodyParser = require('koa-bodyparser')
 const config = require('./config.json')
 const peer = require('./lib/network/peers')
-const peerRunner = require('./lib/network/runner')
+// const peerRunner = require('./lib/network/runner')
 
 program
   .version(config.version)
@@ -21,25 +21,6 @@ app.use(peer.routes(), peer.allowedMethods())
 // app.use(bodyparser({
 //  enableTypes: ['json', 'form', 'text']
 // }))
-app.use(async (ctx) => {
-  if (ctx.url === '/' && ctx.method === 'GET') {
-    // 当GET请求时候返回表单页面
-    let html = `
-      <h1>koa2 request post demo</h1>
-      <form method="POST" action="/api/peer/connect">
-        <p>userName</p>
-        <input name="userName" /><br/>
-        <p>nickName</p>
-        <input name="nickName" /><br/>
-        <p>email</p>
-        <input name="email" /><br/>
-        <button type="submit">submit</button>
-      </form>
-    `
-    ctx.body = html
-  }
-})
-
 app.listen(config.port)
 
 // peerRunner.checkPeerState()
