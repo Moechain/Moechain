@@ -1,7 +1,8 @@
 const program = require('commander')
-const Koa = require('koa')
-const app = new Koa()
-const bodyParser = require('koa-bodyparser')
+const express = require('express')
+const logger = require('morgan')
+const bodyParser = require('body-parser')
+
 const config = require('./config.json')
 const peer = require('./lib/network/peers')
 // const peerRunner = require('./lib/network/runner')
@@ -15,12 +16,14 @@ program
 if (program.port) {
   config.port = program.port
 }
-app.use(bodyParser())
-app.use(peer.routes(), peer.allowedMethods())
 
-// app.use(bodyparser({
-//  enableTypes: ['json', 'form', 'text']
-// }))
+var app = express()
+
+app.use(logger('dev'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use('/api/peer', peer)
 app.listen(config.port)
 
 // peerRunner.checkPeerState()
