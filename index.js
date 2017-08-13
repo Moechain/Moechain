@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 
 const config = require('./config.json')
 const peer = require('./lib/network/peers')
-// const peerRunner = require('./lib/network/runner')
+const peerRunner = require('./lib/network/runner')
 
 program
   .version(config.version)
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/api/peer', peer)
 app.listen(config.port)
 
-// peerRunner.checkPeerState()
+peerRunner.runner()
 
 console.log('Moechain is listening on port: %s :-)', config.port)
 
