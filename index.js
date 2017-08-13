@@ -29,3 +29,9 @@ app.listen(config.port)
 // peerRunner.checkPeerState()
 
 console.log('Moechain is listening on port: %s :-)', config.port)
+
+// var schedule = require('node-schedule')
+
+// schedule.scheduleJob('*/2 * * * * *', function () {
+ // console.log('scheduleCronstyle:' + new Date())
+// })
