@@ -14,6 +14,7 @@ console.log(utils.generatorAddress(key.publicKey))
 
 let a = utils.generatorBlockHash({a: 233333, b: 33333332})
 console.log(a)
+console.log('blake:',utils.blake('23333'))
 let account = new Account(['23','384'])
 console.log(rlp.decode(account.serialize()).toString())
 let miner = new Miner()
