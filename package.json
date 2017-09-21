@@ -21,7 +21,9 @@
     "bs58": "^4.0.1",
     "commander": "^2.11.0",
     "ethashjs": "^0.0.7",
+    "ethereumjs-util": "^5.1.2",
     "express": "^4.15.3",
+    "is-buffer": "^1.1.5",
     "joi": "^10.6.0",
     "leveldown": "^1.7.2",
     "levelup": "^1.3.9",
@@ -33,7 +35,8 @@
     "q-level": "^1.1.3",
     "request": "^2.81.0",
     "sequelize": "^4.4.2",
-    "tweetnacl": "^1.0.0"
+    "tweetnacl": "^1.0.0",
+    "tweetnacl-util": "^0.15.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

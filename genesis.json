@@ -1,0 +1,19 @@
+/* block header should have hash , difficulty, creactor, time, root, tx hash, reward , nonce and extra
+*/
+
+{
+    "header": {
+    "hash": "00000000000000000000000000000000",
+    "difficulty": "13100",
+    "creactor": "mrdccmznfvXt658nqQihk4LMLakQ9nNWTn",
+    "time": "1505057255",
+    "root": "",
+    "tx hash": "",
+    "reward": "",
+    "nonce": "",
+    "extra": "a268656c6c6f2c20776f726c642e204d6f65636861696e20697320636f6d6d696e6721"
+},
+    "txs": [
+    ]
+
+}
