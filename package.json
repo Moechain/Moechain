@@ -15,6 +15,7 @@
   "author": "elven",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.5.0",
     "big-integer": "^1.6.25",
     "blakejs": "^1.1.0",
     "body-parser": "^1.17.2",
