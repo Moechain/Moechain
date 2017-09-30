@@ -1,5 +1,7 @@
 # MoeChain
 
+[![Build Status](https://travis-ci.org/Elvenisboy/Moechain.svg?branch=master)](https://travis-ci.org/Elvenisboy/Moechain)
+
 Moechain is a blockchain platform, written with javascript......
 
 ....
@@ -11,7 +13,9 @@ Moechain is a blockchain platform, written with javascript......
 # Todo list
 
  - [x] a light weight p2p network
- - [ ] genesis block 
+ - [x] genesis block 
+ - [x] transaction trie
+ - [x] account trie
  - [ ] http broad
  - [ ] send transaction
  - [ ] receive transaction
