@@ -21,7 +21,7 @@ Moechain is a blockchain platform, written with javascript......
  - [ ] receive transaction
  - [x] minner 
  - [ ] block broad 
- - [ ] account state
+ - [x] account state
  # something
 
  Because merkle-patricia-tree(from ethereumjs) is very useful and Moechain will use it. Thanks for ethereumjs! But if I can write merkle patricia tree by myself, I will remove this moudle from Moechain, hhhh
