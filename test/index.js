@@ -44,7 +44,6 @@ const utils = new Utils()
 //   ret.v = sig.recovery + 27
 //   return ret
 // }
-
 console.log(utils.generatorPrivateKey().toString('hex'))
 console.log(utils.generatorPublicKey(utils.generatorPrivateKey()).length)
-
+console.log(  utils.timestamp()-1507038991)
