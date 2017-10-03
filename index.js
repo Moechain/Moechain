@@ -2,7 +2,7 @@ const program = require('commander')
 const express = require('express')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
-
+const cowsay = require("cowsay")
 const config = require('./config.json')
 const peer = require('./lib/network/peers')
 const peerRunner = require('./lib/network/runner')
@@ -28,7 +28,13 @@ app.listen(config.port)
 
 peerRunner.runner()
 
-console.log('Moechain is listening on port: %s :-)', config.port)
+console.log(cowsay.say({
+  text: "Moechain is listening on port: %s :-)",
+  T: "U ",
+}), config.port)
+
+// console.log('Moechain is listening on port: %s :-)', config.port)
+
 
 // var schedule = require('node-schedule')
 
