@@ -1,8 +1,6 @@
 # MoeChain
 
-[![Travis branch](https://img.shields.io/travis/Elvenisboy/Moechain/master.svg)](https://travis-ci.org/Elvenisboy/Moechain)
-
-[![Coveralls branch](https://img.shields.io/coveralls/Elvenisboy/Moechain/master.svg)](https://coveralls.io/github/Elvenisboy/Moechain?branch=master)
+[![Travis branch](https://img.shields.io/travis/Elvenisboy/Moechain/master.svg)](https://travis-ci.org/Elvenisboy/Moechain) [![Coveralls branch](https://img.shields.io/coveralls/Elvenisboy/Moechain/master.svg)](https://coveralls.io/github/Elvenisboy/Moechain?branch=master)
 
 Moechain is a blockchain platform, written with javascript......
 
