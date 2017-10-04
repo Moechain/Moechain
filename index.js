@@ -5,6 +5,8 @@ const bodyParser = require('body-parser')
 const cowsay = require("cowsay")
 const config = require('./config.json')
 const peer = require('./lib/network/peers')
+const transaction = require('./lib/network/transaction')
+
 const peerRunner = require('./lib/network/runner')
 
 program
@@ -24,6 +26,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use('/api/peer', peer)
+app.use('/api/transaction', transaction)
 app.listen(config.port)
 
 peerRunner.runner()
