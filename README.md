@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/Elvenisboy/Moechain.svg?branch=master)](https://travis-ci.org/Elvenisboy/Moechain)
 
+[![Coverage Status](https://coveralls.io/repos/github/Elvenisboy/Moechain/badge.svg?branch=master)](https://coveralls.io/github/Elvenisboy/Moechain?branch=master)
+
 Moechain is a blockchain platform, written with javascript......
 
 ....
