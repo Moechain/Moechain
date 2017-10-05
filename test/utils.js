@@ -12,7 +12,7 @@ describe('Utils', () => {
             expect(32).to.equal(utils.generatorPrivateKey().length)
         })
         it('should return a buffer', () => {
-            expect(true).to.equal(_.isBuffer(utils.generatorPrivateKey()))
+            expect(_.isBuffer(utils.generatorPrivateKey())).to.be.true
         })
     })
 
@@ -21,7 +21,7 @@ describe('Utils', () => {
             expect(64).to.equal(utils.generatorPublicKey(utils.generatorPrivateKey()).length);
         })
         it('should return a buffer', () => {
-            expect(true).to.equal(_.isBuffer(utils.generatorPublicKey(utils.generatorPrivateKey())))
+            expect(_.isBuffer(utils.generatorPublicKey(utils.generatorPrivateKey()))).to.be.true
         })
     })
 
@@ -33,17 +33,17 @@ describe('Utils', () => {
 
     describe('#validate', () => {
         it('a good privateKey should return ture', () => {
-            expect(true).to.equal(utils.validatePrivateKey(privateKey))
+            expect(utils.validatePrivateKey(privateKey)).to.be.true
         })
         it('a bad privateKey should return false', () => {
-            expect(false).to.equal(utils.validatePrivateKey(Buffer.from('233333333333333333333333333333333333333333333333333333333333333', 'hex')))
+            expect(utils.validatePrivateKey(Buffer.from('233333333333333333333333333333333333333333333333333333333333333', 'hex'))).to.be.false
         })
         
         it('a good publicKey should return ture', () => {
-            expect(true).to.equal(utils.validatePublicKey(publicKey))
+            expect(utils.validatePublicKey(publicKey)).to.be.true
         })
         it('a bad publicKey  should return false', () => {
-            expect(false).to.equal(utils.validatePrivateKey(Buffer.from('233333333333333333333333333333333333333333333333333333333333333', 'hex')))
+            expect(utils.validatePrivateKey(Buffer.from('233333333333333333333333333333333333333333333333333333333333333', 'hex'))).to.be.false
         })
     })
 
@@ -58,7 +58,7 @@ describe('Utils', () => {
 
     describe('#Timestamp', () => {
         it('should be a number', () =>{
-            expect(true).to.equal(_.isNumber(utils.timestamp()))
+            expect(_.isNumber(utils.timestamp())).to.be.true
         })
     })
 });
