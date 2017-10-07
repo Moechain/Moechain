@@ -16,11 +16,11 @@ Moechain is a blockchain platform, written with javascript......
  - [x] genesis block 
  - [x] transaction trie
  - [x] account trie
- - [ ] http broad
- - [ ] send transaction
- - [ ] receive transaction
- - [x] minner 
- - [ ] block broad 
+ - [x] transaction http broad
+ - [x] send transaction
+ - [x] receive transaction
+ - [ ] block broad and receive
+ - [ ] consensus
  - [x] account state
  # something
 
