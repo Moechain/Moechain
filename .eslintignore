@@ -1,3 +1,5 @@
 test/*
 lib/modules/*
 coverage/*
+lib/account
+lib/block/test.js
