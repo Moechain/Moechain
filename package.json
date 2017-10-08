@@ -55,6 +55,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "istanbul": "^1.0.0-alpha.2",
     "mocha": "^4.0.0",
+    "prettier": "^1.7.4",
     "supertest": "^3.0.0"
   }
 }
