@@ -31,10 +31,13 @@ app.listen(config.port)
 
 peerRunner.runner()
 
-console.log(cowsay.say({
-  text: 'Moechain is listening on port: %s :-)',
-  T: 'U '
-}), config.port)
+console.log(
+  cowsay.say({
+    text: 'Moechain is listening on port: %s :-)',
+    T: 'U '
+  }),
+  config.port
+)
 
 // console.log('Moechain is listening on port: %s :-)', config.port)
 
