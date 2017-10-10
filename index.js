@@ -6,7 +6,7 @@ const cowsay = require('cowsay')
 const config = require('./config.json')
 const peer = require('./lib/network/peers')
 const transaction = require('./lib/network/transaction')
-
+const senators = require('./lib/consensus/senators')
 const peerRunner = require('./lib/network/runner')
 
 program
@@ -27,6 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use('/api/peer', peer)
 app.use('/api/transaction', transaction)
+app.use('/api/consensus', senators)
 app.listen(config.port)
 
 peerRunner.runner()
