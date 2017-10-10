@@ -19,7 +19,7 @@ if (program.port) {
   config.port = program.port
 }
 
-var app = express()
+const app = express()
 
 app.use(logger('dev'))
 app.use(bodyParser.json())
