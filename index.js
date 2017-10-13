@@ -1,14 +1,18 @@
 const program = require('commander')
-const express = require('express')
-const logger = require('morgan')
-const bodyParser = require('body-parser')
+const Koa = require('koa')
+const app = new Koa()
+const json = require('koa-json')
+const onerror = require('koa-onerror')
+const bodyparser = require('koa-bodyparser')
+const logger = require('koa-logger')
 const cowsay = require('cowsay')
+
 const config = require('./config.json')
 const peer = require('./lib/network/peers')
 const transaction = require('./lib/network/transaction')
 const senators = require('./lib/consensus/senators')
 const peerRunner = require('./lib/network/runner')
-// this version use epress.js
+
 program
   .version(config.version)
   .option('-i, --integer <n>', 'An integer argument', parseInt)
@@ -19,15 +23,30 @@ if (program.port) {
   config.port = program.port
 }
 
-const app = express()
+onerror(app)
 
-app.use(logger('dev'))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyparser({
+  enableTypes:['json', 'form', 'text']
+}))
+app.use(json())
+app.use(logger())
 
-app.use('/api/peer', peer)
-app.use('/api/transaction', transaction)
-app.use('/api/consensus', senators)
+app.use(async (ctx, next) => {
+  const start = new Date()
+  await next()
+  const ms = new Date() - start
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+})
+
+app.use(peer.routes(), peer.allowedMethods())
+app.use(transaction.routes(), transaction.allowedMethods())
+app.use(senators.routes(), senators.allowedMethods())
+
+app.on('error', (err, ctx) => {
+  console.error('server error', err, ctx)
+})
+
+
 app.listen(config.port)
 
 peerRunner.runner()
@@ -40,10 +59,6 @@ console.log(
   config.port
 )
 
-// console.log('Moechain is listening on port: %s :-)', config.port)
+module.exports = app
 
-// var schedule = require('node-schedule')
 
-// schedule.scheduleJob('*/2 * * * * *', function () {
-// console.log('scheduleCronstyle:' + new Date())
-// })
