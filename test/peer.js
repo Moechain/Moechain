@@ -1,12 +1,12 @@
-// const request = require('supertest')
+// var app = require('../lib/network/peers')
+// var request = require('co-supertest').agent(app.listen())
 // const expect = require('chai').expect
 
-// const app = require('../index');
-
+// require('co-mocha')
 
 // describe('GET /api/peer/ping', function() {
 //   it('respond with json', function(done) {
-//        request(app.listen()) 
+//        request() 
 //       .get('/api/peer/ping')
 //       .set('Accept', 'application/json')
 //       .expect('Content-Type', /json/)
