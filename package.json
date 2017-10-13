@@ -38,7 +38,6 @@
     "memdown": "^1.2.7",
     "merkle-patricia-tree": "^2.2.0",
     "moechain-chain": "^0.2.0",
-    "mongoose": "^4.12.1",
     "morgan": "^1.8.2",
     "node-schedule": "^1.2.4",
     "request": "^2.81.0",
