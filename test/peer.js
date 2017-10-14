@@ -1,13 +1,19 @@
 const supertest = require('supertest')
 const chai = require('chai')
-const app = require('../index')
+const agent = require('supertest').agent
+const Koa = require('koa')
 
+const app = new Koa()
+const supertestCompatibleServer = agent(app.callback())
 const expect = chai.expect
-const request = supertest(app.listen())
+
+const peer = require('../lib/network/peers')
+
+app.use(peer.routes(), peer.allowedMethods())
 
 describe('GET /api/peer/ping', () => {
   it('respond with json', done => {
-    request
+    supertestCompatibleServer
       .get('/api/peer/ping')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
@@ -19,7 +25,7 @@ describe('GET /api/peer/ping', () => {
   })
 
   it('version should be v1.0', done => {
-    request
+    supertestCompatibleServer
       .get('/api/peer/ping')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
@@ -34,7 +40,7 @@ describe('GET /api/peer/ping', () => {
 
 describe('POST /api/peer/connect', () => {
   it('content should not wrong', done => {
-    request
+    supertestCompatibleServer
       .post('/api/peer/content')
       .send({ host: '127.0.0.1', port: 3000 })
       .end(function(err, res) {
