@@ -12,7 +12,7 @@ const peer = require('./lib/network/peers')
 const transaction = require('./lib/network/transaction')
 const senators = require('./lib/consensus/senators')
 const peerRunner = require('./lib/network/runner')
-
+const walletAccount = require('./lib/wallet/account')
 program
   .version(config.version)
   .option('-i, --integer <n>', 'An integer argument', parseInt)
@@ -41,6 +41,7 @@ app.use(async (ctx, next) => {
 app.use(peer.routes(), peer.allowedMethods())
 app.use(transaction.routes(), transaction.allowedMethods())
 app.use(senators.routes(), senators.allowedMethods())
+app.use(walletAccount.routes(), walletAccount.allowedMethods())
 
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
