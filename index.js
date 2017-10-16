@@ -12,6 +12,7 @@ const peer = require('./lib/network/peers')
 const transaction = require('./lib/network/transaction')
 const senators = require('./lib/consensus/senators')
 const peerRunner = require('./lib/network/runner')
+const consensusRunner = require('./lib/consensus/runner')
 const walletAccount = require('./lib/wallet/account')
 program
   .version(config.version)
@@ -48,6 +49,7 @@ app.on('error', (err, ctx) => {
 })
 
 peerRunner.runner()
+consensusRunner.runner()
 
 module.exports = app
 
