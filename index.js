@@ -49,7 +49,7 @@ app.on('error', (err, ctx) => {
 })
 
 peerRunner.runner()
-consensusRunner.runner()
+consensusRunner.runner
 
 module.exports = app
 
