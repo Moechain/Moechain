@@ -14,6 +14,7 @@ const senators = require('./lib/consensus/senators')
 const peerRunner = require('./lib/network/runner')
 const consensusRunner = require('./lib/consensus/runner')
 const walletAccount = require('./lib/wallet/account')
+const blocks = require('./lib/network/block')
 program
   .version(config.version)
   .option('-i, --integer <n>', 'An integer argument', parseInt)
@@ -43,6 +44,7 @@ app.use(peer.routes(), peer.allowedMethods())
 app.use(transaction.routes(), transaction.allowedMethods())
 app.use(senators.routes(), senators.allowedMethods())
 app.use(walletAccount.routes(), walletAccount.allowedMethods())
+app.use(blocks.routes(), blocks.allowedMethods())
 
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
