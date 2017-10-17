@@ -51,7 +51,9 @@ app.on('error', (err, ctx) => {
 })
 
 peerRunner.runner()
-consensusRunner.runner
+
+let runner = new consensusRunner()
+runner.start()
 
 module.exports = app
 
