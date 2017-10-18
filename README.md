@@ -6,6 +6,8 @@
 [![Coveralls branch](https://img.shields.io/coveralls/Elvenisboy/Moechain/master.svg)](https://coveralls.io/github/Elvenisboy/Moechain?branch=master) 
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://github.com/Elvenisboy/Moechain) 
 [![AUR](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/Elvenisboy/Moechain)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](#badge)
+![built by](https://img.shields.io/badge/build%20by-Moechain-yellow.svg)
 
 Moechain is a blockchain platform, written with javascript and ❤ ヾ(*´▽‘*)ﾉ
 
