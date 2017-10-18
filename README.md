@@ -1,8 +1,13 @@
-# MoeChain
+<h1 align="center">
+  <img src="https://avatars3.githubusercontent.com/u/30978707?s=120&v=4"  />
+</h1>
 
-[![Travis branch](https://img.shields.io/travis/Elvenisboy/Moechain/master.svg)](https://travis-ci.org/Elvenisboy/Moechain) [![Coveralls branch](https://img.shields.io/coveralls/Elvenisboy/Moechain/master.svg)](https://coveralls.io/github/Elvenisboy/Moechain?branch=master) [![npm](https://img.shields.io/npm/v/npm.svg)](https://github.com/Elvenisboy/Moechain) [![AUR](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/Elvenisboy/Moechain)
+[![Travis branch](https://img.shields.io/travis/Elvenisboy/Moechain/master.svg)](https://travis-ci.org/Elvenisboy/Moechain)
+[![Coveralls branch](https://img.shields.io/coveralls/Elvenisboy/Moechain/master.svg)](https://coveralls.io/github/Elvenisboy/Moechain?branch=master) 
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://github.com/Elvenisboy/Moechain) 
+[![AUR](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/Elvenisboy/Moechain)
 
-Moechain is a blockchain platform, written with javascript......
+Moechain is a blockchain platform, written with javascript and ❤ ヾ(*´▽‘*)ﾉ
 
 ....
 
@@ -19,8 +24,8 @@ Moechain is a blockchain platform, written with javascript......
  - [x] transaction http broad
  - [x] send transaction
  - [x] receive transaction
- - [ ] block broad and receive
- - [ ] consensus
+ - [x] block broad and receive
+ - [x] consensus
  - [x] account state
  # something
 
