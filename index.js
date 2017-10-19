@@ -15,6 +15,7 @@ const peerRunner = require('./lib/network/runner')
 const consensusRunner = require('./lib/consensus/runner')
 const walletAccount = require('./lib/wallet/account')
 const blocks = require('./lib/network/block')
+const blockchain = require('./lib/block/blockchain')
 program
   .version(config.version)
   .option('-i, --integer <n>', 'An integer argument', parseInt)
@@ -51,6 +52,8 @@ app.on('error', (err, ctx) => {
 })
 
 peerRunner.runner()
+
+blockchain.loadblocks()
 
 let runner = new consensusRunner()
 runner.start()
