@@ -19,7 +19,7 @@ const blockchain = require('./lib/block/blockchain')
 program
   .version(config.version)
   .option('-i, --integer <n>', 'An integer argument', parseInt)
-  .option('-p, --port <n>', 'a port for Moechain', parseInt)
+  // .option('-p, --port <n>', 'a port for Moechain', parseInt)
   .parse(process.argv)
 
 if (program.port) {
@@ -59,6 +59,11 @@ let runner = new consensusRunner()
 runner.start()
 
 module.exports = app
+
+
+if(process.env.PORT !== null) {
+    config.port = process.env.PORT
+}
 
 app.listen(config.port)
 console.log(
