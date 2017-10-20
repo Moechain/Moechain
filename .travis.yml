@@ -15,3 +15,6 @@ script:
 
 after_script:
   - npm run cover  
+
+notifications:
+  webhooks: https://app.fossa.io/hooks/travisci  

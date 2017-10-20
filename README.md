@@ -39,3 +39,7 @@ Moechain is a blockchain platform, written with javascript and ❤ ヾ(*´▽‘
 
 ## License
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMoechain%2FMoechain.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FMoechain%2FMoechain?ref=badge_large)
+
+## Open Source Report
+
+see this link: [Open Source Report for Moechain](https://app.fossa.io/reports/d7eebb16-f755-4a9a-8ed9-aa773c044e5e)
