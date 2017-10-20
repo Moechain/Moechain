@@ -8,6 +8,7 @@
 [![AUR](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/Elvenisboy/Moechain)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](#badge)
 ![built by](https://img.shields.io/badge/build%20by-Moechain-yellow.svg)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMoechain%2FMoechain.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMoechain%2FMoechain?ref=badge_shield)
 
 Moechain is a blockchain platform, written with javascript and ❤ ヾ(*´▽‘*)ﾉ
 
@@ -34,3 +35,7 @@ Moechain is a blockchain platform, written with javascript and ❤ ヾ(*´▽‘
  Because merkle-patricia-tree(from ethereumjs) is very useful and Moechain will use it. Thanks for ethereumjs! But if I can write merkle patricia tree by myself, I will remove this moudle from Moechain, hhhh
  
  
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMoechain%2FMoechain.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FMoechain%2FMoechain?ref=badge_large)
