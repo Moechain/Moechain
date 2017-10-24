@@ -12,6 +12,8 @@
 
 Moechain is a blockchain platform, written with javascript and ❤ ヾ(*´▽‘*)ﾉ
 
+See docs here: [中文文档](https://docs.moechain.com) [English Docs(writing)](https://docs.moechain.com)
+
 ....
 
 ....
